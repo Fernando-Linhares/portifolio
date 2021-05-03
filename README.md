@@ -20,7 +20,7 @@ Skills
 
 To install run code:
   
-    composer install
+    composer dump-autoload
 
 Depoy heroko : https://warm-taiga-21876.herokuapp.com 
 
