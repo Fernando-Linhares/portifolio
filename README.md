@@ -22,7 +22,7 @@ To install run code:
   
     composer dump-autoload
 
-Depoy heroko : https://warm-taiga-21876.herokuapp.com 
+Depoy heroko : ...
 
 Dependences:
   Crawler, DOMDocument, DOMXPath, autoload-ps4, bootstrap.
