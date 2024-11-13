@@ -1,10 +1,10 @@
 $('.bxslider').bxSlider({
-    auto: true,
-    autoControls: true,
-    stopAutoOnClick: true,
-    pager: true,
-    slideWidth: 600
-  });
+  auto: true,
+  autoControls: true,
+  stopAutoOnClick: true,
+  pager: true,
+  slideWidth: 600
+});
 
 function handleScroll() {
   let scrollbar = Math.ceil(window.scrollY);
@@ -21,14 +21,14 @@ function handleScroll() {
 
     sideBarBlur = ['bg-slate-800/40', 'shadow-zinc-800', 'shadow-sm']
   }
+
   document.querySelector('#navbar').classList = []
 
   let classList = [...sideBarBlur, 'w-full', 'flex', 'justify-end', 'items-center', 'py-2', 'fixed'];
 
   classList.forEach(cl => {
     document.querySelector('#navbar').classList.add(cl);
-  })
-
+  });
 }
 
 window.addEventListener('scroll', handleScroll)
@@ -49,45 +49,43 @@ $('.access-solicitation').on('click', () => Swal.fire({
     }
   }))
 
-  window.onload = async () =>{
-    let title = document.querySelector('#title');
-    let name = '< Fernando L. Silvestre Fullstack Developer />';
+window.onload = async () =>{
+  let title = document.querySelector('#title');
+  let name = '< Fernando L. Silvestre Fullstack />';
 
-    let wait = (time) => new Promise((resolve, reject)=>setTimeout(()=> resolve(), time));
+  let wait = (time) => new Promise((resolve, reject)=>setTimeout(()=> resolve(), time));
 
-    let c = cursor();
-    c.start();
+  let c = cursor();
+  c.start();
 
-    for(let char of name.split('')) {
-      await wait(100)
-      title.innerHTML += char;
-    }
-
-    c.end();
+  for(let char of name.split('')) {
+    await wait(100)
+    title.innerHTML += char;
   }
 
+  c.end();
+}
 
 function cursor() {
-
   let el = document.querySelector('#cursor');
   let interval = null;
   let flag = true;
   return {
     start: () => {
-      $(el).removeClass('hidden');
+      $(el).removeClass('opacity-0');
 
       interval = setInterval(() => {
       if (flag) {
-        $(el).addClass('hidden');
+        $(el).addClass('opacity-0');
       } else {
-        $(el).removeClass('hidden');
+        $(el).removeClass('opacity-0');
       }
       
       flag = !flag;
-    } , 278)
+    } , 378)
   },
     end: () => {
-      $(el).addClass('hidden');
+      $(el).addClass('opacity-0');
       clearInterval(interval);
     }
   };
