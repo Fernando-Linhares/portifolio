@@ -1,6 +1,7 @@
 $('.bxslider').bxSlider({
-  auto: true,
-  autoControls: true,
+  auto: false,
+  adaptiveHeight: true,
+  autoControls: false,
   stopAutoOnClick: true,
   pager: true,
   slideWidth: 600
@@ -139,13 +140,6 @@ $('.overlay').css({
   background: 'rgba(0,0,0,0)'
 })
 }, 2000);
-
-document.querySelectorAll('img').forEach(img => {
-
-   let assets_path = window.location.href + 'assets';
-
-  img.setAttribute('src', assets_path + img.getAttribute('src'))
-});
 
 setTimeout(()=>{
   $('.overlay').hide(500);
