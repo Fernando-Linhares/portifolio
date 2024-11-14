@@ -140,11 +140,19 @@ $('.overlay').css({
 })
 }, 2000);
 
+document.querySelectorAll('img').forEach(img => {
+
+   let assets_path = window.location.href + 'assets';
+
+  img.setAttribute('src', assets_path + img.getAttribute('src'))
+});
+
 setTimeout(()=>{
   $('.overlay').hide(500);
   $('#description').toggleClass('opacity-0', 'opacity-1')
   $('#header').removeClass('pb-80')
   document.querySelectorAll('img').forEach(img => {
+    window.location.href + 'assets/';
     if($(img).hasClass('opacity-0')) {
       $(img).toggleClass('opacity-0', 'opacity-1')
     }
