@@ -152,3 +152,20 @@ setTimeout(()=>{
   
   writeTitle();
 },4000);
+
+
+$('#see-more').on('click', ()=>{
+
+  let text = `
+  infraestrutura, trabalhando com Docker, AWS e Azure, o que me permite entregar soluções robustas e escaláveis.
+                  Ao longo da minha trajetória, desenvolvi sistemas web para empresas, pequenos negócios e projetos pessoais, sempre com foco em inovação, boas
+                  práticas de desenvolvimento, Design Driven Development (DDD), padrões de projeto (Design Patterns) e Test Driven Development (TDD). Contribuí em projetos
+                    relevantes, como integrações com sistemas governamentais, incluindo o Sistema de Protocolo Único (SPU) e o AssineJá, criando soluções seguras para assinatura digital.
+                  Tenho também experiência em projetos pessoais voltados para blockchain, sistemas de e-commerce com ERPs integrados e alta capacidade de processamento. 
+                  Minha maestria em Laravel, ASP.NET, Angular, Vue e Ruby on Rails me permite criar soluções de ponta, sempre impulsionando a inovação e buscando 
+                  resultados que transformam negócios.
+  `
+  document.querySelector('#experience').innerHTML += text;
+  $('#see-more').hide()
+
+})
