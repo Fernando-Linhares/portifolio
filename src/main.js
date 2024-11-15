@@ -1,13 +1,3 @@
-$('.bxslider').bxSlider({
-  auto: false,
-  adaptiveHeight: true,
-  autoControls: false,
-  stopAutoOnClick: true,
-  pager: true,
-  slideWidth: 600
-});
-
-
 $('.access-solicitation').on('click', () => Swal.fire({
   title: "Solicitar Acesso",
   text: "Solicite o acesso ao repositorio via linkedin",
@@ -153,6 +143,16 @@ setTimeout(()=>{
   });
   
   writeTitle();
+
+  $('.bxslider').bxSlider({
+    auto: false,
+    adaptiveHeight: true,
+    autoControls: false,
+    stopAutoOnClick: true,
+    pager: true,
+    slideWidth: 600
+  });
+  
 },4000);
 
 
@@ -169,5 +169,4 @@ $('#see-more').on('click', ()=>{
   `
   document.querySelector('#experience').innerHTML += text;
   $('#see-more').hide()
-
 })
