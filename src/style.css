@@ -49,3 +49,8 @@
   top: 0;
   bottom: 0;
 }
+
+
+#bx-wrapper img {
+  width: auto !important
+}
